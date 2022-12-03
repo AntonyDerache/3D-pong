@@ -1,4 +1,0 @@
-repository "3D pong@a3D_pong_game@cloud"
-  path "/"
-    br "/main"
-    co "/main"
