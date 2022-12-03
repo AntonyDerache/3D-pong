@@ -216,6 +216,7 @@ public class GameManager : MonoBehaviour
     public void PauseGame()
     {
         isPlaying = false;
+        _ball.SetVelocity(Vector3.zero);
         _uiManager.isPaused = true;
     }
 
