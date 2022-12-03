@@ -32,9 +32,7 @@ public class GameManager : MonoBehaviour
     }
 
     void Start() {
-        if (AudioManager.instance) {
-            AudioManager.instance.PlayGameMusic();
-        }
+        AudioManager.instance?.PlayGameMusic();
         StartCoroutine(CounterBeforeStart());
     }
 
@@ -73,9 +71,7 @@ public class GameManager : MonoBehaviour
     public void IncreaseScore(int amount, PlayerSide side)
     {
         StartCoroutine(_cam.Shake(1f, .5f));
-        if (AudioManager.instance) {
-            AudioManager.instance.PlaySfxScoreSound();
-        }
+        AudioManager.instance?.PlaySfxScoreSound();
         if (side == PlayerSide.RIGHT) {
             Debug.Log("Right scored");
             Debug.Log("left additional life:" + _leftPlayer.additionalLife);

@@ -573,12 +573,12 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.05
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1019152136}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+      - m_Target: {fileID: 1943260798}
+        m_TargetAssemblyTypeName: HelpMenu, Assembly-CSharp
         m_MethodName: SetMusicVolume
         m_Mode: 0
         m_Arguments:
@@ -2605,17 +2605,6 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1019152136 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8525456782311800372, guid: 7938789c1664aa449a3423b954017fb0, type: 3}
-  m_PrefabInstance: {fileID: 3074283949311751597}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f66270bec9ef82e47b2b1789a5749bf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1060576644
 GameObject:
   m_ObjectHideFlags: 0
@@ -2728,7 +2717,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.05, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2935,8 +2924,8 @@ RectTransform:
   m_Father: {fileID: 943953509}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.05, y: 0}
-  m_AnchorMax: {x: 0.05, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4136,7 +4125,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.05, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4210,8 +4199,8 @@ RectTransform:
   m_Father: {fileID: 146457963}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.05, y: 0}
-  m_AnchorMax: {x: 0.05, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4686,12 +4675,12 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.05
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1019152136}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+      - m_Target: {fileID: 1943260798}
+        m_TargetAssemblyTypeName: HelpMenu, Assembly-CSharp
         m_MethodName: SetSfxVolume
         m_Mode: 0
         m_Arguments:
@@ -5419,6 +5408,8 @@ MonoBehaviour:
   _player1KeyDown: {fileID: 456382679}
   _player2KeyUp: {fileID: 146761065}
   _player2KeyDown: {fileID: 1554274040}
+  _sfxSlider: {fileID: 1751505070}
+  _musicSlider: {fileID: 201245374}
 --- !u!1 &1943459750
 GameObject:
   m_ObjectHideFlags: 0
@@ -6648,14 +6639,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1847599348250356297, guid: 7938789c1664aa449a3423b954017fb0, type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1847599348250356297, guid: 7938789c1664aa449a3423b954017fb0, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 6984458826290843630, guid: e805132c663150548ae3b3d0ac14106e, type: 2}
     - target: {fileID: 2632686114803568029, guid: 7938789c1664aa449a3423b954017fb0, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -6702,6 +6685,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5617054016535315730, guid: 7938789c1664aa449a3423b954017fb0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784839049156214151, guid: 7938789c1664aa449a3423b954017fb0, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

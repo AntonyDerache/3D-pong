@@ -20,12 +20,9 @@ public class AudioManager : MonoBehaviour
         } else {
             instance = this as AudioManager;
             DontDestroyOnLoad(gameObject);
+            _musicAudioSource.volume = .05f;
+            _sfxAudioSource.volume = .5f;
         }
-    }
-
-    private void Start() {
-        _musicAudioSource.volume = .05f;
-        _sfxAudioSource.volume = .05f;
     }
 
     private void OnApplicationQuit()
@@ -71,6 +68,7 @@ public class AudioManager : MonoBehaviour
 
     public void SetMusicVolume(float value)
     {
+        Debug.Log(value);
         _musicAudioSource.volume = value;
     }
 
@@ -93,5 +91,15 @@ public class AudioManager : MonoBehaviour
     {
         MuteSfx(mute);
         MuteMusic(mute);
+    }
+
+    public float GetSfxVolume()
+    {
+        return _sfxAudioSource.volume;
+    }
+
+    public float GetMusicVolume()
+    {
+        return _musicAudioSource.volume;
     }
 }
